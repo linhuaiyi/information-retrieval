@@ -24,8 +24,9 @@ def ltp_stc_seg(text, pattern):
     try:
         response = urllib2.urlopen(url)
         content = response.read().strip()
-        return content
         print content
+        return content
+
     except urllib2.HTTPError, e:
         print >> sys.stderr, e.reason
 
